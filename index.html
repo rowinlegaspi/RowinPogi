@@ -1,59 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets Trike!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lets Trike!</title>
+<style>
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+nav img {
+    vertical-align: middle;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-container {
+    background-color: #000000;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.login-container input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #005fa3;
+}
+
+.login-container .forgot {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.login-container .forgot a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.login-container .forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-container .signup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-container .signup button {
+    background-color: #28a745;
+    width: 100%;
+}
+
+.login-container .signup button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 25px;
+    }
+
+    header {
+        font-size: 28px;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+}
+</style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
+<body>
 
-    <!-- Header -->
-    <header style="background-color: #4CAF50; color: white; padding: 20px; text-align: center; font-size: 24px;">
-        Lets Trike!
-    </header>
+<header>Lets Trike!</header>
 
-    <!-- Navigation Links -->
-    <nav style="background-color: white; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0;">
-            <li>About us</li>
-            <li><a href="mailto:Rowinlegaspi12345@gmail.com" style="text-decoration: none; color: #4CAF50;">Email me</a></li>
-            <li>
-                Follow us:
-                <a href="https://www.facebook.com/rowin.legaspi">
-                    <img src="Source/Image/fb.png" alt="facebook logo" width="20px" style="vertical-align: middle;">
-                </a>
-                <a href="https://www.instagram.com/rowinlegaspi_/">
-                    <img src="Source/Image/background.jpeg.jpg" alt="instagram logo" width="20px" style="vertical-align: middle;">
-                </a>
-            </li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="mailto:Rowinlegaspi12345@gmail.com">Email Me</a></li>
+        <li>
+            Follow Us:
+            <a href="#"><img src="Source/Image/fb.png" alt="facebook" width="20"></a>
+            <a href="#"><img src="Source/Image/background.jpeg.jpg" alt="instagram" width="20"></a>
+        </li>
+    </ul>
+</nav>
 
-    <!-- Main Content -->
-    <main style="padding: 40px; text-align: center;">
-        <h1>Welcome to Lets Trike!</h1>
-        <p>Explore our website to learn more about our trike services, events, and community.</p>
+<main>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="Login.html" method="get">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
 
-        <!-- Example sections -->
-        <section style="margin-top: 30px;">
-            <h2>Our Services</h2>
-            <ul style="list-style: disc; display: inline-block; text-align: left; margin-top: 10px;">
-                <li>Trike Rentals</li>
-                <li>Guided Tours</li>
-                <li>Custom Routes</li>
-            </ul>
-        </section>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
 
-        <section style="margin-top: 30px;">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out via email or follow us on social media!</p>
-        </section>
-    </main>
+            <div class="forgot">
+                <a href="#">Forgot Password?</a>
+            </div>
 
-    <!-- Footer -->
-    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
-        &copy; 2025 Lets Trike! All Rights Reserved.
-    </footer>
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="signup">
+            <button>Create New Account</button>
+        </div>
+    </div>
+</main>
+
+<footer>&copy; 2025 Lets Trike! All Rights Reserved.</footer>
 
 </body>
 </html>
