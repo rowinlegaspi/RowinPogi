@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Lets Trike</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0077cc, #00c6ff);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 36px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c6ff;
+}
+
+nav img {
+    vertical-align: middle;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    padding: 40px 20px;
+    border-radius: 12px;
+    color: #111;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.welcome h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.feature-card:nth-child(4) {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #0077cc, #00c6ff);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        font-size: 28px;
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+    }
+
+    .welcome p,
+    .feature-card p {
+        font-size: 16px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>Lets Trike!</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+            Follow Us:
+            <a href="#"><img src="Source/Image/fb.png" alt="facebook" width="20"></a>
+            <a href="#"><img src="Source/Image/background.jpeg.jpg" alt="instagram" width="20"></a>
+        </li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h1>Welcome Back, [Username]!</h1>
+        <p>Explore our trike services, upcoming events, and community features. Lets Trike is your trusted partner for safe and enjoyable city rides.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Book a Ride</h3>
+            <p>Schedule your trike rides easily with our user-friendly booking system and get to your destination safely and on time.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Track Rides</h3>
+            <p>Keep track of your ride history, upcoming trips, and real-time vehicle location for convenience and safety.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Community Events</h3>
+            <p>Join community events, local activities, and meet other riders in our Lets Trike community.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Support</h3>
+            <p>Need help? Our customer support is ready to assist you with any questions or concerns about your rides.</p>
+        </div>
+    </section>
+</main>
+
+<footer>&copy; 2025 Lets Trike! All Rights Reserved.</footer>
+
+</body>
+</html>
